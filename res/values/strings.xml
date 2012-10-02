@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MinigamesActivity!</string>
+    <string name="app_name">Minigames</string>
+    <string name="start">Start</string>
+    
+    <!-- Scorescreen + Highscore -->
+    <string name="timeLeftString">Overgebleven tijd:</string>
+    <string name="yourScoreString">Score:</string>
+    <string name="totalScoreString">Totale score:</string>
+    <string name="inputNameString">Jouw naam:</string>
+    <string name="submitScoreString">Score opslaan</string>
+    <string name="submitScoreCancelString">Score niet opslaan</string>
+    <string name="nextImageString">Volgende afbeelding</string>
+    <string name="youLostString">Helaas geen highscore</string>
+
+</resources>
