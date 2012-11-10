@@ -17,6 +17,7 @@ public class ClickHandler {
 	
 private Bitmap _bitmap;
 private contextHolder _ch =  contextHolder.getInstance();
+private boolean returnValue = false;
 
 private ArrayList<Point> _redPoints = new ArrayList<Point>();	
 	
@@ -43,6 +44,7 @@ private ArrayList<Point> _redPoints = new ArrayList<Point>();
 		 Game.clickedRightCount++;
 		 if (Game.clickedRightCount == 3)
 		 {
+			 returnValue = true;
 			 return true;
 		 }
 		}
@@ -54,8 +56,13 @@ private ArrayList<Point> _redPoints = new ArrayList<Point>();
         
     	_ch.getContext().findViewById(R.id.clickAreaView).invalidate();
     	
+    	returnValue = false;
     	return false;
 		
+	}
+	
+	public boolean getLastReturnValue(){
+		return returnValue;
 	}
 	
     private void checkforRedpixel(int x, int y)

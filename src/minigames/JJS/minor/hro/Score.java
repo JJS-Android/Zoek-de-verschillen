@@ -4,6 +4,7 @@ import minigames.JJS.minor.hro.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.os.Bundle;
@@ -63,6 +64,8 @@ public class Score extends Activity implements OnClickListener {
         View nextImageBtn = findViewById(R.id.nextImageBtn);
     	View inputNameEditText = findViewById(R.id.inputNameEditText);
     	View youLostEditText = findViewById(R.id.youLostEditText);
+    	
+    	nextImageBtn.setOnClickListener(this);
         
         // show or hide buttons
         if (isFinished) {
@@ -101,14 +104,15 @@ public class Score extends Activity implements OnClickListener {
 			break;
 			case R.id.nextImageBtn :
 				// TODO: add next image function call
-				finish();
+				Log.w("Finish", "Returning to game...");
+				this.finish();
 			break;
 			case R.id.submitScoreCancelBtn :
-				finish();
+				this.finish();
 			break;
 		}
 	}
-	
+
 	private boolean isInHighscore(int score) {
 		int count = 0;
 		boolean inHighscore = false;
